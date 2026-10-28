@@ -1,0 +1,17 @@
+======================================================================
+ResourceOpt Experimental Summary Report
+======================================================================
+
+1. Constrained Optimization Benchmark Results
+Scenario Name                              | x Candidate    | Stationarity | Primal Feas  | LICQ   | Verdict
+------------------------------------------------------------------------------------------------------------
+Case 1: Feasible Interior Optimum          | [3.80, 4.20]   | 3.55271e-15  | 0.00000e+00  | True   | Verified Optimum
+Case 2: Feasible Boundary Optimum          | [2.00, 7.00]   | 0.00000e+00  | 0.00000e+00  | True   | Verified Optimum
+Case 3: Infeasible Candidate Point         | [6.50, 3.50]   | 1.08167e+01  | 3.25000e+00  | True   | Infeasible Candidate
+Case 4: Linearly Independent Active Constraints | [2.00, 7.00]   | GramDet=2.50e-01 | ActCons=2     | True   | LICQ Holds (Full Rank Active Jacobian)
+Case 5: Linearly Dependent Active Constraints | [2.00, 7.00]   | GramDet=0.00e+00 | ActCons=3     | False  | LICQ Failed (Rank Deficient Redundant Constraints)
+
+2. Optimality and Constraint Qualification Checks
+ - Lagrange multipliers solved via the direct saddle-point block KKT system [[Q, A^T], [A, 0]]
+ - KKT verification evaluated stationarity, primal feasibility, dual feasibility, and complementary slackness
+ - LICQ evaluated the determinant of the active constraint Jacobian Gram matrix

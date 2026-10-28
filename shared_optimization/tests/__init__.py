@@ -1,0 +1,1 @@
+"""Shared optimization test suite."""

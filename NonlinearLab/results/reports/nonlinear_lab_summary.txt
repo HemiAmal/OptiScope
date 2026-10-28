@@ -1,0 +1,30 @@
+======================================================================
+NonlinearLab Experimental Summary Report
+======================================================================
+
+1. Ill-Conditioned Quadratic Benchmark (kappa=10.0)
+Algorithm              | Final f(x)   | ||grad f||   | Iters  | Time (ms) | Status
+----------------------------------------------------------------------------------
+Fixed GD               | 1.23194e-10  | 2.21986e-05  | 150    | 14.72     | Converged
+Exact Line Search GD   | 1.61603e-13  | 8.06029e-07  | 11     | 1.83      | Converged
+Armijo GD              | 9.54226e-12  | 9.31541e-06  | 54     | 14.11     | Converged
+Polyak Momentum        | 1.50690e-11  | 7.87018e-06  | 164    | 18.61     | Converged
+Nesterov GD            | 5.85034e-17  | 1.52975e-08  | 98     | 14.87     | Converged
+Newton Method          | 0.00000e+00  | 0.00000e+00  | 1      | 0.20      | Converged
+Damped Newton          | 0.00000e+00  | 0.00000e+00  | 1      | 0.26      | Converged
+BFGS                   | 1.75022e-14  | 7.59397e-07  | 7      | 2.56      | Converged
+
+2. Newton One-Step Demonstration
+Initial: [12.5, -8.0] -> 1-Step: [0.0, 0.0] (Exact: [0.0, 0.0])
+Verified: True (Error Norm: 0.000000e+00)
+
+3. Rosenbrock Valley Benchmark
+Algorithm              | Final f(x)   | ||grad f||   | Iters  | Time (ms) | Status
+----------------------------------------------------------------------------------
+Fixed GD               | 2.28495e+00  | 2.11442e+00  | 500    | 39.42     | MaxIters
+Armijo GD              | 1.91572e-03  | 5.73590e-02  | 500    | 147.06    | MaxIters
+Polyak Momentum        | 1.81816e-03  | 3.94446e-02  | 500    | 43.61     | MaxIters
+Nesterov GD            | 2.52624e-03  | 4.67871e-02  | 500    | 53.50     | MaxIters
+Newton Method          | 1.85274e-11  | 8.60863e-06  | 5      | 0.54      | Converged
+Damped Newton          | 3.74398e-21  | 4.47333e-10  | 21     | 2.92      | Converged
+BFGS                   | 2.74564e-17  | 8.83463e-08  | 34     | 9.91      | Converged

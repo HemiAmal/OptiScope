@@ -1,0 +1,29 @@
+======================================================================
+SparseModel Experimental Summary Report
+======================================================================
+
+1. Nonsmooth Norm Minimization: f(x) = ||x||_2
+Initial: [3.0, -2.5, 4.0, -1.0, 2.0]
+Final Minimum Norm: 8.038279e-08 in 250 iters
+
+2. Lasso Regularization Path (Sparsity Recovery)
+Lambda   | Objective    | Train MSE  | Zero Coeffs  | Iters  | Time (s)
+-----------------------------------------------------------------------
+0.001    | 0.17555      | 0.33583    | 5            / 8 | 350    | 4.3247  
+0.010    | 0.24564      | 0.34000    | 5            / 8 | 350    | 4.1908  
+0.050    | 0.55020      | 0.37118    | 5            / 8 | 350    | 4.1079  
+0.100    | 0.92535      | 0.42828    | 5            / 8 | 350    | 4.4561  
+0.250    | 2.01821      | 0.68692    | 5            / 8 | 350    | 4.2544  
+0.500    | 3.69166      | 1.39082    | 5            / 8 | 350    | 4.1636  
+
+OLS Baseline MSE: 0.24543
+
+3. Coefficient Recovery Breakdown (lambda = 0.050):
+ - CPU_Load_pct             : True= +3.50 | Lasso=+3.166 | OLS=+3.421
+ - Aux_Sensor_A             : True= +0.00 | Lasso=+0.028 | OLS=-0.018
+ - Memory_Allocation_GB     : True= -2.50 | Lasso=-2.345 | OLS=-2.543
+ - Aux_Sensor_B             : True= +0.00 | Lasso=-0.000 | OLS=+0.008
+ - Concurrent_Requests_k    : True= +1.80 | Lasso=+1.729 | OLS=+1.885
+ - Redundant_Counter_1      : True= +0.00 | Lasso=+0.021 | OLS=-0.018
+ - Redundant_Counter_2      : True= +0.00 | Lasso=-0.000 | OLS=+0.015
+ - Noise_Channel            : True= +0.00 | Lasso=-0.003 | OLS=-0.002
