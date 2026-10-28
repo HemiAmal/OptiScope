@@ -123,17 +123,3 @@ python run_all.py --all
 # Interactive menu
 python run_all.py
 ```
-
----
-
-## 5. Automated Unit Test Verification Summary
-
-Executing `python run_all.py --test` runs **77 tests**:
-- `shared_optimization/tests/`: **51 unit tests passed** (Vectors, Matrices, Linear Systems, Derivatives, Convergence, Line Search, GD, Momentum, Nesterov, Newton, BFGS, Subgradient, Adaptive Optimizers, Constraints).
-- `EnergyOpt/tests/`: **6 unit tests passed** (Synthetic data, Zero leakage, Regression convergence, Lagrange dispatch, KKT/LICQ).
-- `PredictMaint/tests/`: **5 unit tests passed** (Sensor synthesis, Zero leakage, BCE/F1/Confusion matrix metrics, Logistic regression).
-- `NonlinearLab/tests/`: **5 unit tests passed** (Derivatives verification, Newton 1-step theorem, Quadratic solvers, BFGS on Rosenbrock).
-- `SparseModel/tests/`: **5 unit tests passed** (Sparse data generation, Subgradient at zero, General subgradient, Lasso shrinkage).
-- `ResourceOpt/tests/`: **5 unit tests passed** (Lagrange block solver, Interior KKT, Boundary KKT, Infeasible candidate rejection, LICQ pass/fail).
-
-**Status: 77/77 Tests Passed (100% Success).**
